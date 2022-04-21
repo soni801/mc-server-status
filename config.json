@@ -1,0 +1,10 @@
+{
+    "token": "",
+    "serverUrl": "",
+    "api": "https://api.mcsrvstat.us/2/",
+    "guild": "",
+    "channels": {
+        "status": "",
+        "playerAmount": ""
+    }
+}

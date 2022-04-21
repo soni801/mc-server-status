@@ -1,7 +1,15 @@
 {
   "name": "mc-server-status",
   "packageManager": "yarn@3.2.0",
+  "main": "main.js",
+  "scripts": {
+    "start": "tsc && node ."
+  },
   "dependencies": {
     "discord.js": "^13.6.0"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.25",
+    "typescript": "^4.6.3"
   }
 }
