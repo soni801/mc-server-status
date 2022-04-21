@@ -1,11 +1,11 @@
 {
   "name": "mc-server-status",
   "packageManager": "yarn@3.2.0",
-  "main": "main.js",
   "scripts": {
-    "start": "tsc && node ."
+    "start": "tsc && node dist/main.js"
   },
   "dependencies": {
+    "axios": "^0.26.1",
     "discord.js": "^13.6.0"
   },
   "devDependencies": {

@@ -1,7 +1,10 @@
 {
     "token": "",
-    "serverUrl": "",
-    "api": "https://api.mcsrvstat.us/2/",
+    "mc": {
+        "server": "",
+        "api": "https://api.mcsrvstat.us/2/",
+        "interval": 60000
+    },
     "guild": "",
     "channels": {
         "status": "",
