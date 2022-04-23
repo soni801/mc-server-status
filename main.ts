@@ -14,7 +14,11 @@ function time(): string
 // Run when the client is ready
 client.once('ready', () =>
 {
+    client.user!.setActivity(config.botStatus);
     console.log(`${time()} Ready!`);
+
+    const statusChannel = client.guilds.cache.get(config.guild)!.channels.cache.get(config.channels.status)!;
+    const playerChannel = client.guilds.cache.get(config.guild)!.channels.cache.get(config.channels.playerCount)!;
 
     setInterval(() =>
     {
@@ -22,6 +26,10 @@ client.once('ready', () =>
         axios.get(config.mc.api + config.mc.server).then(r =>
         {
             console.log(`${time()} Received data:\n\tOnline: ${r.data.online}\t Player count: ${r.data.players.online}`);
+
+            statusChannel.edit({ name: config.naming.status.prefix +
+                (r.data.online ? config.naming.status.online : config.naming.status.offline) });
+            playerChannel.edit({ name: config.naming.playerCount.prefix + r.data.players.online });
         });
     }, config.mc.interval);
 });

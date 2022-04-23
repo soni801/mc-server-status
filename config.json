@@ -1,5 +1,6 @@
 {
     "token": "",
+    "botStatus": "",
     "mc": {
         "server": "",
         "api": "https://api.mcsrvstat.us/2/",
@@ -9,5 +10,15 @@
     "channels": {
         "status": "",
         "playerAmount": ""
+    },
+    "naming": {
+        "status": {
+            "prefix": "Status: ",
+            "online": "\uD83D\uDFE2 Online",
+            "offline": "\uD83D\uDD34 Offline"
+        },
+        "playerCount": {
+            "prefix": "Players: "
+        }
     }
 }
